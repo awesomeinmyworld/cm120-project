@@ -178,7 +178,7 @@ function Silt(x, y, radius, lifetime, color, type)
     }
     if (this.y > canvas.height && this.type != 2)
     {
-      if(this.type != 3)
+      //if(this.type != 3)
         this.type = 1; // becomes a triangle at the bottom unless it is already set to be destroyed
     } //end if
     else if (this.y > canvas.height && this.type == 2)
