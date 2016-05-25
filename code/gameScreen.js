@@ -174,18 +174,18 @@ function Silt(x, y, radius, lifetime, color, type)
     if (this.lifetime > 0 || this.y < canvas.height)
     {
       this.y += this.speed * 0.5; //moves y down particles[i].speed0.3
-      this.lifetime--;
+      //this.lifetime--;
     }
     if (this.y > canvas.height && this.type != 2)
     {
-      //if(this.type != 3)
+      if(this.type != 3)
         this.type = 1; // becomes a triangle at the bottom unless it is already set to be destroyed
     } //end if
     else if (this.y > canvas.height && this.type == 2)
     {
       //resets the projectile as a regular silt particle
-      //this.type = 3; // self destruct
-      this.type = 0;
+      this.type = 3; // self destruct
+      //this.type = 0;
     } //end else if
   } //end update
   
@@ -194,7 +194,7 @@ function Silt(x, y, radius, lifetime, color, type)
     player.energy += SILTVALUE;
     if(player.energy < 0)
       player.energy = 0;
-    //this.type = 3;
+    this.type = 3;
   } // player collision
     
   this.siltPiling = function(obj)
@@ -396,12 +396,12 @@ function updateGame()
     }
     for (var i = 0; i < siltParticles.length; i++)
     {
-      //if(siltParticles[i].type == 3)//3
-      //{
-        //console.log(collisionObjects.indexOf(siltParticles[i]));
-        //siltParticles.splice(i, 1); // destroys particle
-      //}
-      //else
+      if(siltParticles[i].type == 3)//3
+      {
+        console.log(collisionObjects.indexOf(siltParticles[i]));
+        siltParticles.splice(i, 1); // destroys particle
+      }
+      else
         siltParticles[i].siltPiling(siltParticles);
     } // silt collision
   }
