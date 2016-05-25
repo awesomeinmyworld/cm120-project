@@ -35,7 +35,7 @@ var siltParticles = new Array();
 
 var SPEED = 5;
 var SLOWSPEED = 2;
-var SUNLIGHTSPEED = 100;//2
+var SUNLIGHTSPEED = 2;
 var PLAYERENERGYRATE = -.06;
 var PLAYERSTARTENERGY = 50;
 var REEFENERGYRATE = -5;
