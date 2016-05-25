@@ -1,4 +1,3 @@
-console.log("testing");
 function Zoox(x, y, speed, radius)
 {
   this.x = x;
@@ -411,7 +410,7 @@ function updateGame()
 
 function drawGame(){
 	drawWave();
-    
+    console.log("testing");
   context.fillStyle = 'green';
   context.fillRect(leftBoundary,upperBoundary,canvas.width, canvas.height); 
   
