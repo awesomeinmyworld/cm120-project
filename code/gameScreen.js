@@ -194,7 +194,7 @@ function Silt(x, y, radius, lifetime, color, type)
     player.energy += SILTVALUE;
     if(player.energy < 0)
       player.energy = 0;
-    this.type = 3;
+    //this.type = 3;
   } // player collision
     
   this.siltPiling = function(obj)
