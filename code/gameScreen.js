@@ -184,7 +184,8 @@ function Silt(x, y, radius, lifetime, color, type)
     else if (this.y > canvas.height && this.type == 2)
     {
       //resets the projectile as a regular silt particle
-      this.type = 3; // self destruct
+      //this.type = 3; // self destruct
+      this.type = 0;
     } //end else if
   } //end update
   
