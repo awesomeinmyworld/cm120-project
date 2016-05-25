@@ -176,11 +176,11 @@ function Silt(x, y, radius, lifetime, color, type)
       this.y += this.speed * 0.5; //moves y down particles[i].speed0.3
       //this.lifetime--;
     }
-    if (this.y > canvas.height && this.type != 2)
-    {
-      if(this.type != 3)
-        this.type = 1; // becomes a triangle at the bottom unless it is already set to be destroyed
-    } //end if
+    //if (this.y > canvas.height && this.type != 2)
+    //{
+      //if(this.type != 3)
+       // this.type = 1; // becomes a triangle at the bottom unless it is already set to be destroyed
+    //} //end if
     else if (this.y > canvas.height && this.type == 2)
     {
       //resets the projectile as a regular silt particle
@@ -208,7 +208,6 @@ function Silt(x, y, radius, lifetime, color, type)
         var index = obj.indexOf(obj[i]);
         obj.splice(index, 1);//removes particle that fell
         this.type = 1;//changes the type to a triangle
-        console.log("Pile added to");
         this.r = Math.sqrt(Math.pow(this.r + 3, 2)); // adds volume to pile
       }//end if
           
@@ -410,7 +409,7 @@ function updateGame()
 
 function drawGame(){
 	drawWave();
-  context.fillStyle = 'red';//green
+  context.fillStyle = 'green';
   context.fillRect(leftBoundary,upperBoundary,canvas.width, canvas.height); 
   
   for(var i=drawObjects.length-1; i>=0; i--)
