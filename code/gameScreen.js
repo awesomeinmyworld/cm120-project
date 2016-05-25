@@ -208,9 +208,9 @@ function Silt(x, y, radius, lifetime, color, type)
         var index = obj.indexOf(obj[i]);
         obj.splice(index, 1);//removes particle that fell
         this.type = 1;//changes the type to a triangle
-        console.log("pile created");
+        console.log("Pile created");
         this.r = Math.sqrt(Math.pow(this.r + 3, 2)); // adds volume to pile
-        console.log("pile added to");
+        console.log("Pile added to");
       }//end if
           
       //Case: red particle on pile:   
