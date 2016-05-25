@@ -410,8 +410,7 @@ function updateGame()
 
 function drawGame(){
 	drawWave();
-    console.log("testing");
-  context.fillStyle = 'green';
+  context.fillStyle = 'red';//green
   context.fillRect(leftBoundary,upperBoundary,canvas.width, canvas.height); 
   
   for(var i=drawObjects.length-1; i>=0; i--)
