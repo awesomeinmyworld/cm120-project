@@ -1,3 +1,4 @@
+console.log("testing");
 function Zoox(x, y, speed, radius)
 {
   this.x = x;
