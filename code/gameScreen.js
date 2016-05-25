@@ -396,12 +396,12 @@ function updateGame()
     }
     for (var i = 0; i < siltParticles.length; i++)
     {
-      if(siltParticles[i].type == 2)//3
-      {
-        console.log(collisionObjects.indexOf(siltParticles[i]));
-        siltParticles.splice(i, 1); // destroys particle
-      }
-      else
+      //if(siltParticles[i].type == 3)//3
+      //{
+        //console.log(collisionObjects.indexOf(siltParticles[i]));
+        //siltParticles.splice(i, 1); // destroys particle
+      //}
+      //else
         siltParticles[i].siltPiling(siltParticles);
     } // silt collision
   }
